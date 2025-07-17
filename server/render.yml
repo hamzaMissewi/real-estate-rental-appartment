@@ -1,0 +1,12 @@
+services:
+    - type: web
+      name: real-estate-server-project
+      runtime: node
+      buildCommand: npm install
+      startCommand: npm start
+      env: node
+      envVars:
+          - key: NODE_ENV
+            value: production
+          - key: PORT
+            value: 10000 # Must match your server's port (e.g., `process.env.PORT || 3000`)
