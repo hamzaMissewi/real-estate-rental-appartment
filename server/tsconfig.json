@@ -1,35 +1,16 @@
 {
     "compilerOptions": {
-        "target": "esnext", // Modern ECMAScript version
-        "module": "esnext", // Node.js ES Modules
-        "moduleResolution": "bundler", // Required for Node.js ESM
+        "target": "es2020",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        // "lib": ["es2020"],
+        "outDir": "./dist",
+        "resolveJsonModule": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "declaration": true,
-        "declarationMap": true, // Source maps for .d.ts files
         "strict": true,
         "skipLibCheck": true,
-        "noImplicitAny": false,
-        "allowJs": true,
-        "strictNullChecks": true,
-        "noImplicitThis": false, // Error on implicit this
-        "strictFunctionTypes": false, // Strict function types
-        "strictBindCallApply": false,
-        "sourceMap": true,
-        "outDir": "./dist",
-        "baseUrl": "./src",
-        "rootDir": ".",
-        "experimentalDecorators": true, // Enable decorators
-        "emitDecoratorMetadata": true, // Emit decorator metadata
-        "noUnusedLocals": false, // Error on unused locals
-        "resolveJsonModule": true, // Allow importing JSON
-        // "strictPropertyInitialization": false,
-        // "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
-        // "useUnknownInCatchVariables": true,
-        "paths": {
-            "@/*": ["./src/*"]
-        }
+        "types": ["node"]
     },
-    "typeRoots": ["types/**/*.d.ts", "test/jest/types.d.ts"],
-    "exclude": ["node_modules", "test", "**/*ignore*", "dist"]
+    "include": ["src/**/*", "prisma/**/*"]
 }
