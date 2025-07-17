@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        // "target": "es2020",
+        // "lib": ["es2020"],
+        // "module": "commonjs",
+        // "moduleResolution": "node",
+        "target": "esnext", // Modern ECMAScript version
+        "module": "esnext", // Node.js ES Modules
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "include": ["src/**/*", "prisma/**/*"]
+}
